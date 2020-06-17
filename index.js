@@ -230,18 +230,6 @@ module.exports = function checkPath (packageName, basePath, overrides, includeDe
 
   var packageJson = JSON.parse(fs.readFileSync(packageJsonPath))
 
-  if (overrides && overrides[packageName]) {
-    var override = overrides[packageName]
-    var licenseOverride = matchLicense(override.license)
-    return {
-      name: packageName,
-      version: packageJson.version,
-      license: formatLicense(licenseOverride),
-      licenseFile: override.url,
-      deps: []
-    }
-  }
-
   var license = 'unknown'
   var licenseFilePath
 
@@ -314,6 +302,18 @@ module.exports = function checkPath (packageName, basePath, overrides, includeDe
 
   if (includeOptDependencies || false) {
     Object.keys(packageJson.optionalDependencies || {}).forEach(pushDependency('Opt'))
+  }
+
+  if (overrides && overrides[packageName]) {
+    var override = overrides[packageName]
+    var licenseOverride = matchLicense(override.license)
+    return {
+      name: packageName,
+      version: packageJson.version,
+      license: formatLicense(licenseOverride),
+      licenseFile: override.url,
+      deps: dependencies.sort(function (dep1, dep2) { return dep1.name.localeCompare(dep2.name) })
+    }
   }
 
   return {
