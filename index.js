@@ -202,8 +202,25 @@ module.exports = function checkPath (packageName, basePath, overrides, includeDe
   }
   seenList[seenKey] = true
   if (!fs.existsSync(basePath)) {
-    const parentNodeModules = path.join(path.resolve(basePath, '../../../node_modules'), packageName)
-    if (parentNodeModules !== basePath) {
+    let found = false
+    let parentNodeModules = basePath
+    while (!found && parentNodeModules.indexOf(path.sep + 'node_modules' + path.sep) >= 0) {
+      /**
+       * try to get parent node_modules
+       * if basePath is "./node_modules/moduleA/node_modules/moduleB" but moduleB exists at "./node_modules/moduleB", we need to go up 3 levels
+       */
+      let parentPath = '../../../'
+      // if moduleB is a scoped module, i.e. @vendor/moduleB, we need to go up another leven
+      if (packageName.indexOf('@') === 0) parentPath += '../'
+      parentNodeModules = path.join(parentNodeModules, parentPath)
+      // if moduleA is a scoped module, parentNodeModules does not point to node_modules yet, but to the @vendor directory
+      const parts = parentNodeModules.split(path.sep) // [".", "node_modules", "@vendor", ""]
+      if (parts[parts.length - 2].indexOf('@') === 0) parentNodeModules = path.join(parentNodeModules, '../')
+      // now append the package name again
+      parentNodeModules = path.join(parentNodeModules, packageName)
+      found = fs.existsSync(parentNodeModules)
+    }
+    if (found && parentNodeModules !== basePath) {
       return checkPath(packageName, parentNodeModules, overrides, includeDevDependencies, includeOptDependencies, seenList)
     }
     return null
