@@ -29,7 +29,8 @@
   "scripts": {
     "lint": "eslint .",
     "test-dev": "mocha --watch",
-    "test": "npm run lint && mocha"
+    "test": "npm run lint && mocha",
+    "test-debug": "npm run lint && node --inspect-brk=9229 node_modules/mocha/bin/_mocha --reporter spec --ui qunit"
   },
   "license": "zlib",
   "bin": {
