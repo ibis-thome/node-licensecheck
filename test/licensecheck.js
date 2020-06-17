@@ -1,11 +1,9 @@
-/* global suite, test */
+/* global describe, it */
 
 var assert = require('assert')
 var path = require('path')
 
 var licensecheck = require('../index.js')
-
-suite('licensecheck')
 
 function replacer (key, value) {
   switch (key) {
@@ -19,26 +17,28 @@ function removeLicenseFileKeys (object) {
   return JSON.parse(JSON.stringify(object, replacer))
 }
 
-test('licensecheck self', function () {
-  var tree = removeLicenseFileKeys(licensecheck('.', path.resolve(__dirname, '..')))
-  assert.deepEqual(
-    tree,
-    require('./self.json')
-  )
-})
+describe('licensecheck', function () {
+  it('licensecheck self', function () {
+    var tree = removeLicenseFileKeys(licensecheck('.', path.resolve(__dirname, '..')))
+    assert.deepEqual(
+      tree,
+      require('./self.json')
+    )
+  })
 
-test('licensecheck --dev', function () {
-  var tree = removeLicenseFileKeys(licensecheck('.', path.resolve(__dirname, '..'), null, true))
-  assert.deepEqual(
-    tree,
-    require('./self-dev.json')
-  )
-})
+  it('licensecheck --dev', function () {
+    var tree = removeLicenseFileKeys(licensecheck('.', path.resolve(__dirname, '..'), null, true))
+    assert.deepEqual(
+      tree,
+      require('./self-dev.json')
+    )
+  })
 
-test('licensecheck mochajs', function () {
-  var tree = removeLicenseFileKeys(licensecheck('.', path.resolve(__dirname, '../node_modules/mocha')))
-  assert.deepEqual(
-    tree,
-    require('./mocha.json')
-  )
+  it('licensecheck mochajs', function () {
+    var tree = removeLicenseFileKeys(licensecheck('.', path.resolve(__dirname, '../node_modules/mocha')))
+    assert.deepEqual(
+      tree,
+      require('./mocha.json')
+    )
+  })
 })

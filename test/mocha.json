@@ -1,20 +1,105 @@
 {
   "name": "mocha",
-  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+  "license": "MIT License (https://opensource.org/licenses/MIT)",
   "deps": [
     {
-      "name": "browser-stdout",
-      "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
+      "name": "ansi-colors",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
       "deps": [],
       "depLevel": ""
     },
     {
-      "name": "commander",
-      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "name": "browser-stdout",
+      "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+      "deps": [],
+      "depLevel": ""
+    },
+    {
+      "name": "chokidar",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
       "deps": [
         {
-          "name": "graceful-readlink",
-          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+          "name": "anymatch",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+          "deps": [
+            {
+              "name": "normalize-path",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            },
+            {
+              "name": "picomatch",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        },
+        {
+          "name": "braces",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [
+            {
+              "name": "fill-range",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [
+                {
+                  "name": "to-regex-range",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [
+                    {
+                      "name": "is-number",
+                      "license": "MIT License (https://opensource.org/licenses/MIT)",
+                      "deps": [],
+                      "depLevel": ""
+                    }
+                  ],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        },
+        {
+          "name": "glob-parent",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+          "deps": [
+            {
+              "name": "is-glob",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [
+                {
+                  "name": "is-extglob",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        },
+        {
+          "name": "is-binary-path",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [
+            {
+              "name": "binary-extensions",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        },
+        {
+          "name": "readdirp",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
           "deps": [],
           "depLevel": ""
         }
@@ -23,11 +108,11 @@
     },
     {
       "name": "debug",
-      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
       "deps": [
         {
           "name": "ms",
-          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
           "deps": [],
           "depLevel": ""
         }
@@ -36,37 +121,77 @@
     },
     {
       "name": "diff",
-      "license": "BSD (http://github.com/kpdecker/jsdiff/blob/master/LICENSE)",
+      "license": "BSD 3-Clause \"New\" or \"Revised\" License (https://opensource.org/licenses/BSD-3-Clause)",
       "deps": [],
       "depLevel": ""
     },
     {
       "name": "escape-string-regexp",
-      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
       "deps": [],
       "depLevel": ""
     },
     {
+      "name": "find-up",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
+      "deps": [
+        {
+          "name": "locate-path",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [
+            {
+              "name": "p-locate",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [
+                {
+                  "name": "p-limit",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [
+                    {
+                      "name": "p-try",
+                      "license": "MIT License (https://opensource.org/licenses/MIT)",
+                      "deps": [],
+                      "depLevel": ""
+                    }
+                  ],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        },
+        {
+          "name": "path-exists",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [],
+          "depLevel": ""
+        }
+      ],
+      "depLevel": ""
+    },
+    {
       "name": "glob",
-      "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
+      "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
       "deps": [
         {
           "name": "fs.realpath",
-          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
           "deps": [],
           "depLevel": ""
         },
         {
           "name": "inflight",
-          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
           "deps": [
             {
               "name": "once",
-              "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
+              "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
               "deps": [
                 {
                   "name": "wrappy",
-                  "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
+                  "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
                   "deps": [],
                   "depLevel": ""
                 }
@@ -78,27 +203,27 @@
         },
         {
           "name": "inherits",
-          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
           "deps": [],
           "depLevel": ""
         },
         {
           "name": "minimatch",
-          "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
           "deps": [
             {
               "name": "brace-expansion",
-              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
               "deps": [
                 {
                   "name": "balanced-match",
-                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
                   "deps": [],
                   "depLevel": ""
                 },
                 {
                   "name": "concat-map",
-                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
                   "deps": [],
                   "depLevel": ""
                 }
@@ -110,7 +235,7 @@
         },
         {
           "name": "path-is-absolute",
-          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
           "deps": [],
           "depLevel": ""
         }
@@ -119,49 +244,390 @@
     },
     {
       "name": "growl",
-      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
       "deps": [],
       "depLevel": ""
     },
     {
-      "name": "json3",
-      "license": "MIT (http://kit.mit-license.org/)",
+      "name": "he",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
       "deps": [],
       "depLevel": ""
     },
     {
-      "name": "lodash.create",
-      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "name": "js-yaml",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
       "deps": [
         {
-          "name": "lodash._baseassign",
-          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+          "name": "argparse",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
           "deps": [
             {
-              "name": "lodash._basecopy",
-              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+              "name": "sprintf-js",
+              "license": "BSD 3-Clause \"New\" or \"Revised\" License (https://opensource.org/licenses/BSD-3-Clause)",
+              "deps": [],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        },
+        {
+          "name": "esprima",
+          "license": "BSD 2-Clause \"Simplified\" License (https://opensource.org/licenses/BSD-2-Clause)",
+          "deps": [],
+          "depLevel": ""
+        }
+      ],
+      "depLevel": ""
+    },
+    {
+      "name": "log-symbols",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
+      "deps": [
+        {
+          "name": "chalk",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [
+            {
+              "name": "ansi-styles",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [
+                {
+                  "name": "color-convert",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [
+                    {
+                      "name": "color-name",
+                      "license": "MIT License (https://opensource.org/licenses/MIT)",
+                      "deps": [],
+                      "depLevel": ""
+                    }
+                  ],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            },
+            {
+              "name": "supports-color",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [
+                {
+                  "name": "has-flag",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        }
+      ],
+      "depLevel": ""
+    },
+    {
+      "name": "object.assign",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
+      "deps": [
+        {
+          "name": "define-properties",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [
+            {
+              "name": "object-keys",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        },
+        {
+          "name": "function-bind",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [],
+          "depLevel": ""
+        },
+        {
+          "name": "has-symbols",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [],
+          "depLevel": ""
+        }
+      ],
+      "depLevel": ""
+    },
+    {
+      "name": "promise.allsettled",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
+      "deps": [
+        {
+          "name": "array.prototype.map",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [
+            {
+              "name": "es-abstract",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [
+                {
+                  "name": "es-to-primitive",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [
+                    {
+                      "name": "is-callable",
+                      "license": "MIT License (https://opensource.org/licenses/MIT)",
+                      "deps": [],
+                      "depLevel": ""
+                    },
+                    {
+                      "name": "is-date-object",
+                      "license": "MIT License (https://opensource.org/licenses/MIT)",
+                      "deps": [],
+                      "depLevel": ""
+                    },
+                    {
+                      "name": "is-symbol",
+                      "license": "MIT License (https://opensource.org/licenses/MIT)",
+                      "deps": [],
+                      "depLevel": ""
+                    }
+                  ],
+                  "depLevel": ""
+                },
+                {
+                  "name": "has",
+                  "license": "MIT (https://github.com/tarruda/has/blob/master/LICENSE-MIT), MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                },
+                {
+                  "name": "is-regex",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                },
+                {
+                  "name": "object-inspect",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                },
+                {
+                  "name": "string.prototype.trimend",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                },
+                {
+                  "name": "string.prototype.trimstart",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            },
+            {
+              "name": "es-array-method-boxes-properly",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
               "deps": [],
               "depLevel": ""
             },
             {
-              "name": "lodash.keys",
-              "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+              "name": "is-string",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        },
+        {
+          "name": "iterate-value",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [
+            {
+              "name": "es-get-iterator",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
               "deps": [
                 {
-                  "name": "lodash._getnative",
-                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                  "name": "is-arguments",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
                   "deps": [],
                   "depLevel": ""
                 },
                 {
-                  "name": "lodash.isarguments",
-                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                  "name": "is-map",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
                   "deps": [],
                   "depLevel": ""
                 },
                 {
-                  "name": "lodash.isarray",
-                  "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+                  "name": "is-set",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                },
+                {
+                  "name": "isarray",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            },
+            {
+              "name": "iterate-iterator",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        }
+      ],
+      "depLevel": ""
+    },
+    {
+      "name": "serialize-javascript",
+      "license": "BSD 3-Clause \"New\" or \"Revised\" License (https://opensource.org/licenses/BSD-3-Clause)",
+      "deps": [],
+      "depLevel": ""
+    },
+    {
+      "name": "strip-json-comments",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
+      "deps": [],
+      "depLevel": ""
+    },
+    {
+      "name": "supports-color",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
+      "deps": [
+        {
+          "name": "has-flag",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [],
+          "depLevel": ""
+        }
+      ],
+      "depLevel": ""
+    },
+    {
+      "name": "which",
+      "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+      "deps": [
+        {
+          "name": "isexe",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+          "deps": [],
+          "depLevel": ""
+        }
+      ],
+      "depLevel": ""
+    },
+    {
+      "name": "wide-align",
+      "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+      "deps": [
+        {
+          "name": "string-width",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [
+            {
+              "name": "is-fullwidth-code-point",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            },
+            {
+              "name": "strip-ansi",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [
+                {
+                  "name": "ansi-regex",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        }
+      ],
+      "depLevel": ""
+    },
+    {
+      "name": "workerpool",
+      "license": "Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0)",
+      "deps": [],
+      "depLevel": ""
+    },
+    {
+      "name": "yargs",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
+      "deps": [
+        {
+          "name": "cliui",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+          "deps": [
+            {
+              "name": "string-width",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [
+                {
+                  "name": "emoji-regex",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                },
+                {
+                  "name": "strip-ansi",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [
+                    {
+                      "name": "ansi-regex",
+                      "license": "MIT License (https://opensource.org/licenses/MIT)",
+                      "deps": [],
+                      "depLevel": ""
+                    }
+                  ],
+                  "depLevel": ""
+                }
+              ],
+              "depLevel": ""
+            },
+            {
+              "name": "wrap-ansi",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            }
+          ],
+          "depLevel": ""
+        },
+        {
+          "name": "find-up",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
+          "deps": [
+            {
+              "name": "locate-path",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [
+                {
+                  "name": "p-locate",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
+                  "deps": [],
+                  "depLevel": ""
+                },
+                {
+                  "name": "path-exists",
+                  "license": "MIT License (https://opensource.org/licenses/MIT)",
                   "deps": [],
                   "depLevel": ""
                 }
@@ -172,40 +638,83 @@
           "depLevel": ""
         },
         {
-          "name": "lodash._basecreate",
-          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+          "name": "get-caller-file",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
           "deps": [],
           "depLevel": ""
         },
         {
-          "name": "lodash._isiterateecall",
-          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+          "name": "require-directory",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
           "deps": [],
+          "depLevel": ""
+        },
+        {
+          "name": "require-main-filename",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+          "deps": [],
+          "depLevel": ""
+        },
+        {
+          "name": "set-blocking",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+          "deps": [],
+          "depLevel": ""
+        },
+        {
+          "name": "which-module",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+          "deps": [],
+          "depLevel": ""
+        },
+        {
+          "name": "y18n",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+          "deps": [],
+          "depLevel": ""
+        },
+        {
+          "name": "yargs-parser",
+          "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
+          "deps": [
+            {
+              "name": "camelcase",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            },
+            {
+              "name": "decamelize",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            }
+          ],
           "depLevel": ""
         }
       ],
       "depLevel": ""
     },
     {
-      "name": "mkdirp",
-      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "name": "yargs-unparser",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
       "deps": [
         {
-          "name": "minimist",
-          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
-          "deps": [],
+          "name": "flat",
+          "license": "BSD 3-Clause \"New\" or \"Revised\" License (https://opensource.org/licenses/BSD-3-Clause)",
+          "deps": [
+            {
+              "name": "is-buffer",
+              "license": "MIT License (https://opensource.org/licenses/MIT)",
+              "deps": [],
+              "depLevel": ""
+            }
+          ],
           "depLevel": ""
-        }
-      ],
-      "depLevel": ""
-    },
-    {
-      "name": "supports-color",
-      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
-      "deps": [
+        },
         {
-          "name": "has-flag",
-          "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+          "name": "lodash",
+          "license": "MIT License (https://opensource.org/licenses/MIT)",
           "deps": [],
           "depLevel": ""
         }

@@ -13,7 +13,7 @@ var urltoLicense = require('./urltolicense')
 
 // Alternate abbreviations used by package.json files.
 var licenseAliases = {
-  'BSD': 'BSD-2-Clause',
+  BSD: 'BSD-2-Clause',
   'MIT/X11': 'MIT',
   'apache version 2.0': 'Apache-2.0'
 }
@@ -48,7 +48,7 @@ function matchLicense (licenseString) {
     // If there's an extra "license" on the end of the name, drop it ("MIT License" -> "MIT").
     license = licenseIndex[licenseName] || licenseIndex[licenseName.replace(/ licen[sc]e$/, '')]
     if (!license) {
-      license = {name: licenseName, id: null}
+      license = { name: licenseName, id: null }
     }
     matchingLicenses.push(license)
   }
@@ -66,7 +66,7 @@ var licenseIndex = {}
 Object.keys(spdxLicenses).forEach(function (key) {
   var license = spdxLicenses[key]
   license.id = key
-  license.signatures = [normalizeText(license.license)]
+  license.signatures = [normalizeText(license.licenseText)]
   if (license.url) {
     license.url = license.url.replace(/[\n\r\f]+/, ', ')
   }
@@ -83,7 +83,7 @@ Object.keys(licenseAliases).forEach(function (alias) {
 
 // Read source licenses from license-files directory
 fs.readdirSync(licenseDir).forEach(function (name) {
-    // Add all variant signatures.
+  // Add all variant signatures.
   var id = name.split(',')[0]
   if (licenseIndex[id]) {
     licenseIndex[id].signatures.push(normalizeText(fs.readFileSync(path.join(licenseDir, name), 'utf8')))
@@ -132,8 +132,8 @@ function parseMarkdownLicense (markdownText) {
   var license = getMarkdownLicenseSection(markdownText)
   return (
     license
-    ? (matchLicense(license) || 'nomatch')
-    : matchLicense(markdownText)
+      ? (matchLicense(license) || 'nomatch')
+      : matchLicense(markdownText)
   )
 }
 function getMarkdownLicenseSection (text) {

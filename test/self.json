@@ -1,10 +1,10 @@
 {
   "name": "licensecheck",
-  "license": "zlib License (http://www.zlib.net/zlib_license.html, http://www.opensource.org/licenses/Zlib)",
+  "license": "zlib License (http://www.zlib.net/zlib_license.html)",
   "deps": [
     {
       "name": "colors",
-      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
       "deps": [],
       "depLevel": ""
     },
@@ -18,7 +18,7 @@
           "deps": [
             {
               "name": "abbrev",
-              "license": "ISC License (http://www.isc.org/software/license, http://www.opensource.org/licenses/ISC)",
+              "license": "ISC License (https://www.isc.org/downloads/software-support-policy/isc-license/)",
               "deps": [],
               "depLevel": ""
             }
@@ -30,19 +30,19 @@
     },
     {
       "name": "spdx-license-list",
-      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "license": "Creative Commons Zero v1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/legalcode)",
       "deps": [],
       "depLevel": ""
     },
     {
       "name": "strip-json-comments",
-      "license": "MIT License (http://www.opensource.org/licenses/MIT)",
+      "license": "MIT License (https://opensource.org/licenses/MIT)",
       "deps": [],
       "depLevel": ""
     },
     {
       "name": "treeify",
-      "license": "MIT (http://lp.mit-license.org/)",
+      "license": "MIT (http://lp.mit-license.org/), MIT License (https://opensource.org/licenses/MIT)",
       "deps": [],
       "depLevel": ""
     }

@@ -69,8 +69,8 @@ for (var i = 2; i < process.argv.length; i++) {
   }
 }
 
-var overrides = fs.existsSync(overridesPath) &&
-    JSON.parse(stripJsonComments(fs.readFileSync(overridesPath, 'utf8'))) || {}
+var overrides = (fs.existsSync(overridesPath) &&
+    JSON.parse(stripJsonComments(fs.readFileSync(overridesPath, 'utf8')))) || {}
 
 var licenses = licensecheck('.', path, overrides, includeDevDependencies, includeOptDependencies)
 if (flat) {
